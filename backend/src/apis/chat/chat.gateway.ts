@@ -63,6 +63,7 @@ export class ChatGateway {
     });
 
     const result = this.chatMessageRepository.save({
+      // DB 저장
       user: user,
       room: room,
       message: data[2],
