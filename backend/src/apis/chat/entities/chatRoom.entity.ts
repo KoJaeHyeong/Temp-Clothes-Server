@@ -21,12 +21,6 @@ export class ChatRoom {
   @Field(() => String)
   room: string;
 
-  @ManyToMany(() => ChatMessage, (chatMessage) => chatMessage.chatRoom, {
-    nullable: true,
-  })
-  @Field(() => [ChatMessage])
-  chatMessage: ChatMessage[];
-
   @ManyToOne(() => User)
   @Field(() => User)
   user: User;

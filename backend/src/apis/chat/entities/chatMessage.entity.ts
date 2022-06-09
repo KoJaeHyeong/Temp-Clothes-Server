@@ -26,13 +26,6 @@ export class ChatMessage {
   @Field(() => String)
   room: string;
 
-  @JoinTable()
-  @ManyToMany(() => ChatRoom, (chatRoom) => chatRoom.chatMessage, {
-    nullable: true,
-  })
-  @Field(() => [ChatRoom])
-  chatRoom: ChatRoom[];
-
   @ManyToOne(() => User)
   @Field(() => User)
   user: User;
