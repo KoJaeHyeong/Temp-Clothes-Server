@@ -3,13 +3,10 @@ import { User } from 'src/apis/user/entities/user.entity';
 import {
   Column,
   Entity,
-  JoinTable,
   PrimaryGeneratedColumn,
-  ManyToMany,
   ManyToOne,
   CreateDateColumn,
 } from 'typeorm';
-import { ChatRoom } from './chatRoom.entity';
 
 @Entity()
 @ObjectType()
